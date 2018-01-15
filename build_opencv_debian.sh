@@ -1,5 +1,8 @@
 #!/bin/bash
 # code to build opencv on debian platforms (works on ubuntu, raspbian, etc)
+# this will create a file called opencv-ARCH.tar.gz where ARCH is your architecture
+# to install, run "sudo tar xfv opencv-ARCH.tar.gz -C /usr/local"
+
 
 OPENCV_TAR="https://github.com/opencv/opencv/archive/3.4.0.tar.gz"
 
@@ -27,7 +30,10 @@ mkdir opencv_code/build; cd opencv_code/build
 
 cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=$OUTPUT_DIR -DWITH_OPENMP=ON
 
-make -j $(nproc)
+time make -j $(nproc)
+
+echo "that was the time with $(nproc) jobs"
+
 
 cd $OUTPUT_DIR
 
