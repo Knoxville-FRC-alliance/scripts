@@ -21,7 +21,7 @@ mkdir opencv_out
 OUTPUT_DIR="$PWD/opencv_out"
 
 curl -L $OPENCV_TAR > opencv.tar.gz
-tar xfv opencv.tar.gz
+tar xf opencv.tar.gz
 mv opencv-* opencv_code/
 mkdir opencv_code/build; cd opencv_code/build
 
