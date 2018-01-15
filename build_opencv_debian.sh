@@ -32,6 +32,8 @@ cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=$OUTPUT_DIR -DWITH_OP
 
 time make -j $(nproc)
 
+make install
+
 echo "that was the time with $(nproc) jobs"
 
 
