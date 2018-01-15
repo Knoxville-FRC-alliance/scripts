@@ -23,7 +23,7 @@ OUTPUT_DIR="$PWD/opencv_out"
 curl -L $OPENCV_TAR > opencv.tar.gz
 tar xfv opencv.tar.gz
 mv opencv-* opencv_code/
-mkdir opencv/build; cd opencv/build
+mkdir opencv_code/build; cd opencv_code/build
 
 cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=$OUTPUT_DIR -DWITH_OPENMP=ON
 
